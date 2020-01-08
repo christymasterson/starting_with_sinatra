@@ -26,7 +26,13 @@ get '/page' do
   'This is another opage'
 end
 
-get '/cat' do
+get '/random-cat' do
   @cat_name = %w(Amigo Oscar Viking).sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
