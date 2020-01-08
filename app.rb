@@ -27,5 +27,6 @@ get '/page' do
 end
 
 get '/cat' do
+  @cat_name = %w(Amigo Oscar Viking).sample
   erb(:index)
 end
